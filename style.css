@@ -240,19 +240,21 @@ footer{
 #map iframe{
     vertical-align: bottom;
 }
-@media(max-width: 768px){
+@media(max-width: 5423768px){
 
-     menu {
+    menu {
         height: 80px;
         width: 100%;
         padding: 0 10px;
-        /* flex-direction: column; */
-
+        display: flex;
+        flex-direction: row; /* menu w jednej linii */
+        justify-content: space-between;
+        align-items: center;
     }
 
     #odnosnik {
         font-size: 120%; 
-        margin-left: 0; 
+        margin-left: 5px; 
         padding: 10px;
     }
 
@@ -273,7 +275,6 @@ footer{
         text-align: center;
     }
 
-
     #my {
         flex-direction: column; 
         align-items: center;
@@ -288,9 +289,10 @@ footer{
     }
 
     #imgMy {
-        width: 80%;
+        width: 90%;
         height: auto;
-        margin: 20px 10px;
+        margin: 20px auto;
+        display: block;
     }
 
     #lastProjects table, #lastProjects tr, #lastProjects td {
@@ -318,12 +320,22 @@ footer{
         width: 100%;
         height: 300px;
     }
-    #uslugi{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+
+    #uslugi {
+        grid-template-columns: 1fr; /* 1 kolumna */
+        grid-auto-rows: auto;      /* wiersze dopasowują się do treści */
+        gap: 20px;
+        padding: 20px 5%;
     }
-    #uslImg{
-        width: 40%;
-        height:auto;
+
+    #uslImg {
+        width: 100%; /* obrazki zajmują całą szerokość */
+        height: auto;
+        border-radius: 20px;
+    }
+
+    #uslNapis {
+        font-size: 18px;
+        transform: translate(0%, 150%);
     }
 }
