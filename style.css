@@ -240,7 +240,7 @@ footer{
 #map iframe{
     vertical-align: bottom;
 }
-@media(max-width: 5423768px){
+@media(max-width: 53768px){
 
     menu {
         height: 80px;
@@ -321,21 +321,28 @@ footer{
         height: 300px;
     }
 
-    #uslugi {
-        grid-template-columns: 1fr; /* 1 kolumna */
-        grid-auto-rows: auto;      /* wiersze dopasowują się do treści */
-        gap: 20px;
-        padding: 20px 5%;
-    }
+#uslugi {
+    display: block; /* wyłączamy grid na telefonie */
+    padding: 20px 5%;
+}
 
-    #uslImg {
-        width: 100%; /* obrazki zajmują całą szerokość */
-        height: auto;
-        border-radius: 20px;
-    }
+#uslImg {
+    width: 100%;       /* obrazek w pełnej szerokości */
+    height: auto;      /* proporcje zachowane */
+    border-radius: 20px;
+    margin: 20px 0;    /* odstęp między obrazkami */
+    position: relative; 
+    display: flex;          /* flex do centrowania napisu */
+    align-items: center;    /* pionowo na środku */
+    justify-content: center;/* poziomo na środku */
+}
 
-    #uslNapis {
-        font-size: 18px;
-        transform: translate(0%, 150%);
-    }
+#uslNapis {
+    font-size: 18px;
+    width: 90%;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    pointer-events: none;
+}
 }
