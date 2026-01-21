@@ -87,14 +87,14 @@ header{
     padding: 40px 0 40px;
     pointer-events: none;
 }
-#uslImg{
+.uslImg{
     position: relative;
     width: 100%;
     height:15cm;
     overflow: hidden;
     border-radius: 40px;
 }
-#uslNapis{
+.uslNapis{
     position: absolute;
     z-index: 10;
     font-size: 20px;
@@ -109,7 +109,7 @@ header{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%, -50%,);
+    transform:translate(-50%, -50%);
     color: whitesmoke;
     font-size: 30px;
     font-weight: bold;
@@ -240,14 +240,14 @@ footer{
 #map iframe{
     vertical-align: bottom;
 }
-@media(max-width: 53768px){
+@media(max-width: 768px){
 
     menu {
         height: 80px;
         width: 100%;
         padding: 0 10px;
         display: flex;
-        flex-direction: row; /* menu w jednej linii */
+        flex-direction: row; 
         justify-content: space-between;
         align-items: center;
     }
@@ -321,28 +321,38 @@ footer{
         height: 300px;
     }
 
-#uslugi {
-    display: block; /* wyłączamy grid na telefonie */
-    padding: 20px 5%;
+.uslugi {
+    position: relative;
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+    align-items: center;
+}
+.uslImg img{
+    width: 40%;
+    top: 50%;
+    left: 30%
 }
 
-#uslImg {
-    width: 100%;       /* obrazek w pełnej szerokości */
-    height: auto;      /* proporcje zachowane */
+.uslImg {
+    width: 100%;        
+    height: auto;       
     border-radius: 20px;
-    margin: 20px 0;    /* odstęp między obrazkami */
-    position: relative; 
-    display: flex;          /* flex do centrowania napisu */
-    align-items: center;    /* pionowo na środku */
-    justify-content: center;/* poziomo na środku */
+    margin: 20px 0;     
+    position: relative;        
 }
-
-#uslNapis {
-    font-size: 18px;
-    width: 90%;
+.uslNapis {
+    font-size: 15px;
     text-align: center;
     color: whitesmoke;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     pointer-events: none;
+    padding: 10px 20px;
+    border-radius: 10px; 
 }
+
 }
