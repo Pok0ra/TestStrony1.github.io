@@ -7,74 +7,16 @@ html{
         margin: 0;
     padding: 0;
 }
-@media(max-width: 10768px){
-
-    menu{
-        height: 80px;
-        padding: 0 10px;
-    }
-    #odnosnik {
-        font-size: 100%; /* Mniejszy tekst w menu */
-        margin-left: 5px;
-        padding: 10px;
-    }
-
-    #logo {
-        height: 50px; /* Mniejsze logo */
-        transform: none; /* Usuwamy przesunięcie, żeby nie wystawało */
-        margin: 5px;
-    }
-
-    /* 2. Header - dopasowanie do mniejszego menu */
-    header {
-        padding-top: 80px; 
-    }
-
-    .napis h1 {
-        font-size: 24px; /* Mniejszy napis główny */
-    }
-
-    /* 3. Sekcja "O nas" - elementy jeden pod drugim */
-    #my {
-        flex-direction: column; /* Zamiast obok siebie, będą jeden pod drugim */
-        align-items: center;
-        text-align: center;
-        padding: 40px 5%;
-    }
-
-    .myDescription {
-        width: 100%; /* Tekst na całą szerokość */
-    }
-
-    #imgMy {
-        width: 80%; /* Zdjęcie większe na telefonie */
-        margin-top: 20px;
-    }
-
-    /* 4. Portfolio - zdjęcia w pionie, żeby nie robiły paska na bok */
-    #lastProjects table, 
-    #lastProjects tr, 
-    #lastProjects td {
-        display: block;
-        width: 100%;
-    }
-
-    #img {
-        width: 90%;
-        height: auto; /* Ważne: żeby zdjęcia nie były nienaturalnie wysokie */
-        margin: 10px auto;
-        display: block;
-    }
-
-    /* 5. Kontakt - mniejszy tekst */
-    #kontaktTyp {
-        font-size: 120%;
-    }
-
-    .photos {
-        font-size: 1.5rem;
-    }
+menu{
+    background-color: #1d1c1c;
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    z-index: 1000;
+    display:flex;
+    align-items: center;
 }
+
 body{
     margin: 0;
     padding: 0;
@@ -91,24 +33,11 @@ body{
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     width: 100%;
 }
-menu{
-    background-color: #1d1c1c;
-    width: 100%;
-    height: 120px;
-    position: fixed;
-    top:0;
-    left:0;
-    z-index: 1000;
-    display:flex;
-    align-items: center;
-
-}
 #odnosnik{
     text-decoration: none;
     color:white;
     font-size: 200%;
-    margin-left: 50px;
-    padding: 100px;
+    margin-left:auto;
     top: 50%;
 }
 header{
@@ -121,6 +50,60 @@ header{
     width: 100%;
     height:auto;
     overflow: hidden;
+}
+#uslugi{
+    background-color: #8c5325;
+    color:whitesmoke;
+    padding: 60px 0;
+    min-height: auto;
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap:20px;
+
+}
+#uslugiHeader{
+    background-color: #774115;
+    color:whitesmoke;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #1d1c1c;
+    padding: 40px 0 40px;
+    pointer-events: none;
+}
+#kontaktHeader{
+     background-color: #774115;
+    color:whitesmoke;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #1d1c1c;
+    padding: 40px 0 40px;
+    pointer-events: none;
+}
+#uslImg{
+    position: relative;
+    width: 100%;
+    height:15cm;
+    overflow: hidden;
+    border-radius: 40px;
+}
+#uslNapis{
+    position: absolute;
+    z-index: 10;
+    font-size: 20px;
+    transform:translate(-25%, 300%);
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    pointer-events:none;
 }
 .napis{
     position: absolute;
@@ -193,23 +176,22 @@ ul{
 #lastProjects{
     background-color: #8c5325;
 }
-.photos{
+#lastProjectsHeader{
     text-align: center;
-    padding: 40px 0 40px;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: whitesmoke;
     background-color: #774115;
     text-transform: uppercase;
     letter-spacing: 3px;
     position: relative;
     text-shadow: 2px 2px 4px #1d1c1c;
+    padding: 40px 0 40px;
     pointer-events: none;
 }
 #logo{
     width: auto;
     height: 100px;
-    transform:translate(60%, 0);
-    margin: 20px;
+    margin: 40px;
 }
 a{
     text-decoration: none;
@@ -227,6 +209,21 @@ a{
     text-align: center;
     width: 100%;
 }
+
+#myHeader{
+    border-radius:100px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    background-color: #bfbfbfd9;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    text-shadow: 2px 2px 4px #1d1c1c;
+    padding: 40px 0 40px;
+    pointer-events: none;
+}
+
 footer{
     background-color: #1d1c1c;
     width: 100%;
@@ -242,4 +239,91 @@ footer{
 }
 #map iframe{
     vertical-align: bottom;
+}
+@media(max-width: 768px){
+
+     menu {
+        height: 80px;
+        width: 100%;
+        padding: 0 10px;
+        /* flex-direction: column; */
+
+    }
+
+    #odnosnik {
+        font-size: 120%; 
+        margin-left: 0; 
+        padding: 10px;
+    }
+
+    #logo {
+        height: 50px;
+        width: auto;
+        transform: none;
+        margin: 5px auto;
+        display: block;
+    }
+
+    header {
+        padding-top: 100px;
+    }
+
+    .napis h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+
+    #my {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        padding: 40px 5%;
+        gap: 20px; 
+    }
+
+    .myDescription {
+        width: 100%; 
+        font-size: 1rem;
+    }
+
+    #imgMy {
+        width: 80%;
+        height: auto;
+        margin: 20px 10px;
+    }
+
+    #lastProjects table, #lastProjects tr, #lastProjects td {
+        display: block;
+        width: 100%;
+    }
+
+    #img {
+        width: 100%;
+        height: auto; 
+        margin: 10px auto;
+        display: block;
+    }
+
+    #kontaktTyp {
+        font-size: 1.2rem; 
+    }
+
+    #lastProjectsHeader {
+        font-size: 2rem;
+        padding: 20px 0;
+    }
+
+    #map iframe {
+        width: 100%;
+        height: 300px;
+    }
+    #uslugi{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    }
+    #uslImg{
+        width: 40%;
+        height:auto;
+    }
 }

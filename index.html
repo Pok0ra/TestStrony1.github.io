@@ -2,7 +2,14 @@
 <html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+    <meta name="description" content="Profesjonalne usługi wykończeniowe - remonty mieszkań, domów i biur. 'Majster' się bał? Ty się nie bój! Wojtaś Bau - remont pod kontrolą.">
+    <meta name="keywords" content="remont, wykończenia, wykonczenia, mieszkanie, dom, usługi, uslugi, wykończeniowe, wykonczeniowe, Połczyn-Zdrój, polczyn, zdroj, polczyn-zdroj, swidwin, świdwin, białogard, bialogard, koszalin">
+    <meta name="author" content="Ł.P">
+    <meta property="og:title" content="Usługi Wykończeniowe Wojtaś Bau.">
+    <meta property="og:description" content="Profesjonalne usługi wykończeniowe - remonty mieszkań, domów i biur. 'Majster' się bał? Ty się nie bój! Wojtaś Bau - remont pod kontrolą.">
+    <meta property="og:type" content="website">
+
     <title>Wykończenia wnętrz premium pod klucz - Wojtaś Bau</title>
     <!-- Zakres prac wykończeniowych pod klucz + łazienka. Firma wykończeniowa "Wojtaś Bau"-->
      <!-- Hasło reklamowe ze szybko robimy jak sonic czy cos -->
@@ -16,10 +23,9 @@
     <menu>
         <a id="odnosnik" href="#my">O nas</a>
         <a id="odnosnik" href="#lastProjects">Nasze portfolio</a>
-        <a id="odnosnik" href="#lastProjects">Kontakt</a>
-        <a id="odnosnik" href="#lastProjects">Opcja 4</a>
-        <a id="odnosnik" href="#lastProjects">Opcja 5</a>
-        <a href="#my"><img id="logo" alt="nasze Logo" src="exampleLogo.png"></a>
+        <a id="odnosnik" href="#uslugi">Usługi</a>
+        <a id="odnosnik" href="#kontakt">Kontakt i wycena</a>
+        <a href="#my"><img id="logo" alt="nasze Logo" src="images/exampleLogo.png"></a>
         <a href="https://www.facebook.com"><img id="logo" alt="Facebook" src="images/facebookLogo.png"></a>
         <a href="#kontakt"><img id="logo" alt="Kontakt" src="images/kontaktLogo.png"></a>
         </menu>
@@ -35,14 +41,13 @@
         <main>
         <div id="my">
             <div class="myDescription">
-                <br>
-            <h1 style="transform:translate(15%, 0)">O nas</h1>
-            <h2 style="margin-left: 2%;">'Majster' się bał? Ty się nie bój. Wojtaś Bau - remont pod kontrolą.</h2>
+            <div id="myHeader"><h1>O nas</h1></div><br>
+            <h2 style="margin-left: 2%;">'Majster' się bał? Ty się nie bój. <b style="color: #900202;">Wojtaś Bau</b> - remont pod kontrolą.</h2>
             <p>W branży remontowej często słyszy się historie o <b>„majstrach”</b>, którzy <b>zniknęli</b> w połowie pracy,</p>
             <p><b>przestali odbierać telefony</b> lub zwyczajnie <b>przerosło ich wyzwanie</b></p>
             <p>W <b style="font-size: 120%;"><i>Wojtaś Bau</i></b> mamy na to jedną odpowiedź: <b>profesjonalizm.</b></p>
             <p>Jesteśmy ekipą, która <b>nie boi</b> się <b>trudnych projektów, krzywych ścian czy skomplikowanych instalacji.</b></p><br>
-            <h1 style="transform:translate(10%, 0)">Dlaczego <i><b>Wojtaś Bau?</b></i></h1>
+            <div id="myHeader"><h1>Dlaczego <i><b style="color: #ff4f4f8e;">Wojtaś Bau?</b></i></h1></div>
                 <ul>
                 <li><b style="font-size: 120%;">Koniec z „remontowym strachem”.</b> Wiemy, że boisz się fuszerki i niedotrzymanych terminów.<br>
                     My stawiamy na <b>transparentność</b> – działamy według planu, a <b>Ty masz pełną kontrolę nad postępami.</b>
@@ -51,20 +56,23 @@
                     płytkę, jest kładziony z myślą o tym, że to <b>my podpisujemy się pod tym efektem.</b>
                 </li><br>
                 <li>
-                    <b style="font-size: 120%;">Naprawiamy błędy innych.</b>Jeśli Twój poprzedni wykonawca <b>„się bał”</b> i zostawił wszystko w rozsypce,<br>
+                    <b style="font-size: 120%;">Naprawiamy błędy innych.</b> Jeśli Twój poprzedni wykonawca <b>„się bał”</b> i zostawił wszystko w rozsypce,<br>
                     my przejmujemy stery i doprowadzamy inwestycję do finału zgodnego z Twoją wizją.
                 </li><br>
                 <li>
-                    <b style="font-size: 120%;">Twoje zaufanie to nasza marka.</b>Jako firma rodzinna dbamy o <b>reputację</b>.<br>
-                    Dla nas każdy projekt to nie tylko „zlecenie”, ale wizytówka jakości <b><i>Wojtaś Bau</i></b>.
+                    <b style="font-size: 120%;">Twoje zaufanie to nasza marka.</b> Jako firma dbamy o <b>reputację</b>.<br>
+                    Dla nas każdy projekt to nie tylko „zlecenie”, ale wizytówka jakości <b style="color: #900202;"><i>Wojtaś Bau</i></b>.
                 </li>
                     </ul>
         </div>
             <img src="images/my.jpeg" id="imgMy" alt="Zdjęcie naszych przedstawicieli">
+            
 
-        </div> 
+        </div>
+        <div id="lastProjectsHeader"><h1>Nasze portfolio</h1>
+            </div>
         <div id="lastProjects">
-            <h1 class="photos">Nasze portfolio</h1>
+            
             <table>
                 <tr>
                     <td>
@@ -79,8 +87,45 @@
                     </tr>
             </table>
         </div>
+        <div id="uslugiHeader">
+            <h1>USŁUGI:</h1>
+         </div>
+        <div id="uslugi">
+            <div class="usl1">
+           
+            <div id="uslNapis">
+            <h1>Sucha zabudowa</h1>
+            <h2>Od x zł/m²</h2>
+            </div>
+            <img id="uslImg" alt="Sucha Zabudowa" src="images/suchaZabudowa.jpg">
+            </div>
+            <div class="usl2">
+            <div id="uslNapis">
+            <h1>Gładzie</h1>
+            <h2>od x zł/m²</h2>
+            </div>
+            <img id="uslImg" alt="Gładzie" src="images/gladzie.jpg">
+            </div>
+            <div class="usl3">
+            <div id="uslNapis">
+            <h1>Malowanie natryskowe</h1>
+            <h2>od x zł/m²</h2>
+            </div>
+            <img id="uslImg" alt="Malowanie Natryskowe" src="images/malowanieNatryskowe.jpg">
+            </div>
+            <div class="usl4">
+            <div id="uslNapis">
+            <h1>Podwieszanie sufitów</h1>
+            <h2>od x zł/m²</h2>
+            </div>
+            <img id="uslImg" alt="podwieszanie Sufitów" src="images/podwieszanieSufitow.jpg">
+            </div>
+        </div>
+        <div id="kontaktHeader"><h1>KONTAKT:</h1></div>
         <div id="kontakt">
-            <br><br><h1>KONTAKT:</h1><br>
+            <h2>Zainteresowany? A może masz jakieś pytania? </h2><br>
+            <h1>Skontaktuj się z nami!</h1><br>
+            <h2>Chętnie odpowiemy na wszystkie pytania oraz udzielimy wyceny!</h2><br>
             <ul id="kontaktTyp">
                 <li>
                     <b>Numer Telefonu:</b><br>
@@ -137,7 +182,11 @@
                 }
             }
         }, 1000);
-        
+        window.addEventListener('wheel', function(e)
+        {
+        if(e.ctrlKey) e.preventDefault();
+        }, { passive: false });
+
         </script>
 </body>
 </html>
