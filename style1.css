@@ -242,17 +242,19 @@ footer{
 }
 @media(max-width: 768px){
 
-     menu {
+    menu {
         height: 80px;
         width: 100%;
         padding: 0 10px;
-        /* flex-direction: column; */
-
+        display: flex;
+        flex-direction: row; /* menu w jednej linii */
+        justify-content: space-between;
+        align-items: center;
     }
 
     #odnosnik {
         font-size: 120%; 
-        margin-left: 0; 
+        margin-left: 5px; 
         padding: 10px;
     }
 
@@ -273,7 +275,6 @@ footer{
         text-align: center;
     }
 
-
     #my {
         flex-direction: column; 
         align-items: center;
@@ -288,9 +289,10 @@ footer{
     }
 
     #imgMy {
-        width: 80%;
+        width: 90%;
         height: auto;
-        margin: 20px 10px;
+        margin: 20px auto;
+        display: block;
     }
 
     #lastProjects table, #lastProjects tr, #lastProjects td {
@@ -318,12 +320,27 @@ footer{
         width: 100%;
         height: 300px;
     }
-    #uslugi{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    }
-    #uslImg{
-        width: 40%;
-        height:auto;
-    }
+
+#uslugi {
+    display: block; /* wyłączamy grid na telefonie */
+    padding: 20px 5%;
+}
+
+#uslImg {
+    width: 100%;       /* obrazek w pełnej szerokości */
+    height: auto;      /* proporcje zachowane */
+    border-radius: 20px;
+    margin: 20px 0;    /* odstęp między obrazkami */
+    position: relative; /* żeby napis był względem obrazka */
+}
+
+#uslNapis {
+    font-size: 18px;
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    pointer-events: none;
+}
 }
