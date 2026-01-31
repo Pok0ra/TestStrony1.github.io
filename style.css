@@ -241,7 +241,7 @@ a{
 }
 
 a:hover{
-    transform: translateY(-10px);
+    transform: translateY(-6px);
 }
 #kontaktTyp{
     list-style: none;
