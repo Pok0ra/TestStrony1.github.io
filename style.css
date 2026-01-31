@@ -77,43 +77,73 @@ header{
     pointer-events: none;
 }
 
-#uslugi{
+#uslugi {
     background-color: #8c5325;
-    color:whitesmoke;
-}
-#uslugi table{
-    margin: 10px;
-        padding: 60px 5%;
+    padding: 80px 10%; /* Większy margines boczny na komputerze */
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.uslImg img{
-    width: auto;
-    max-width: 1000px;
-    min-width: 700px;
-    height:15cm;
-    overflow: hidden;
-    border-radius: 40px;
+/* Układamy kafelki w siatce (2 kolumny) */
+.uslugi-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Odstęp między kafelkami */
+    justify-content: center;
+    max-width: 1200px; /* Maksymalna szerokość sekcji, żeby nie rozjechała się na ultra-panoramie */
+    margin: 0 auto;
 }
+
+/* Twoje nazwy klas dla poszczególnych usług */
+.usl1, .usl2, .usl3, .usl4 {
+    flex: 0 1 calc(50% - 15px); /* Każdy zajmuje dokładnie połowę szerokości minus połowa odstępu */
+    box-sizing: border-box;
+}
+
 .uslImg {
-    width: 100%;    
-    max-width: none;    
-    height: auto;
-    border-radius: 20px;
-    margin: 0;     
-    position: relative;   
-}
-.uslNapis {
-    font-size: 20px;
-    text-align: center;
-    color: whitesmoke;
-    width: auto;
-    z-index: 10;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    pointer-events: none;
-    padding: 10px 20px;
-    border-radius: 10px; 
+    position: relative;
+    border-radius: 25px; /* Ładne zaokrąglenie */
+    overflow: hidden;
+    height: 350px; /* Solidna wysokość na komputerze */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Dodaje głębi */
+    transition: transform 0.3s ease; /* Przygotowanie pod hover */
 }
 
+/* Efekt po najechaniu myszką na kafelek */
+.uslImg:hover {
+    transform: translateY(-5px); /* Delikatne uniesienie */
+}
+
+.uslImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zdjęcie wypełnia cały prostokąt, nie rozciąga się */
+    display: block;
+}
+
+.uslNapis {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8)); /* Ładny gradient zamiast jednolitego koloru */
+    color: whitesmoke;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.uslNapis h1 {
+    font-size: 24px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.uslNapis h2 {
+    font-size: 18px;
+    margin: 5px 0 0 0;
+    color: #ffd700; /* Złoty akcent dla ceny - opcjonalnie */
+}
 .napis{
     position: absolute;
     top: 50%;
@@ -336,35 +366,70 @@ footer{
         width: 100%;
         height: 300px;
     }
-#uslugi{
+#uslugi {
     background-color: #8c5325;
-    color:whitesmoke;
+    color: whitesmoke;
     padding: 60px 5%;
     width: 100%;
-    height:auto;
-    overflow: hidden;
-}
-#uslugi table, #uslugi tr, #uslugi td{
-    display: block;
-    width: 100%;
-}
-.uslImg img{
-    width: 70%;
-    height: auto;
+    box-sizing: border-box;
 }
 
-.uslImg {   
+/* Nowy kontener, który zastępuje tabelę */
+.uslugi-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Twoje klasy usług - na komputerze zajmują ok. połowy szerokości */
+.usl1, .usl2, .usl3, .usl4 {
+    flex: 1 1 calc(45% - 20px);
+    min-width: 280px;
+}
+
+.uslImg {
+    position: relative; /* Dzięki temu napisy trzymają się zdjęcia */
     border-radius: 20px;
-    margin: 20px 0;
+    overflow: hidden;
+    height: 300px; /* Stała wysokość, żeby wszystko było równe */
 }
+
+.uslImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zdjęcie wypełnia całość i nie jest spłaszczone */
+    display: block;
+}
+
 .uslNapis {
-    font-size: 15px;
+    position: absolute; /* Napis "pływa" na zdjęciu */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Przyciemnienie tła dla czytelności */
     color: whitesmoke;
-    width: auto;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    pointer-events: none;
-    padding: 10px 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    z-index: 5;
 }
+
+    .uslugi-wrapper {
+        flex-direction: column; /* Ustawia usługi jedna pod drugą */
+    }
+
+    .usl1, .usl2, .usl3, .usl4 {
+        width: 100%; /* Każda usługa na całą szerokość ekranu */
+    }
+
+    .uslImg {
+        height: 200px; /* Nieco mniejsza wysokość na telefonie */
+        margin: 10px 0;
+    }
+
+    .uslNapis h1 {
+        font-size: 1.2rem;
+    }
 footer{
     background-image: url("images/footer.jpg");
     background-size:40%;
