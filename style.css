@@ -285,7 +285,7 @@ footer{
 #map iframe{
     vertical-align: bottom;
 }
-@media(max-width: 768px){
+@media(max-width: 653768px){
 
     menu {
         height: 80px;
@@ -431,11 +431,12 @@ footer{
         font-size: 1.2rem;
     }
 footer{
-    background-image: url("images/footer.jpg");
-    background-size:40%;
-    background-position: center;
+    background-image: url("images/footerTel.jpg");
+    background-size:cover;
+    background-position: center top;
     background-repeat: no-repeat;
     background-color: #151716;
+    display: block;
     width: 100%;
     height: 210px;
 }
